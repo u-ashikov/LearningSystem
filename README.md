@@ -18,7 +18,6 @@ Just download or clone the repository and run it in Visual Studio on your local 
 * Sign out from course - registered users only
 * Upload solution for course - registered users only
 * Listing own courses - registered users only
-* Upload solution for course
 * Download course certificate
 * Search courses
 * Search users
