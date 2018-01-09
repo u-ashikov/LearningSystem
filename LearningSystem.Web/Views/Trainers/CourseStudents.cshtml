@@ -1,0 +1,58 @@
+﻿@model TrainerCourseStudentsListingModel
+
+@{
+    ViewData["Title"] = "Course";
+}
+
+<h2 class="text-center">@ViewData["Title"] @Model.Name - @Model.StartDate - @Model.EndDate</h2>
+<br />
+
+@if(Model.Students.Count() == 0)
+{
+    <h2 class="text-center">No students enrolled in that course!</h2>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Grade</th>
+                <th>Assesment</th>
+                <th>Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var s in Model.Students)
+            {
+                <tr>
+                    <td>@s.Name</td>
+                    <td>@s.Username</td>
+                    <td>@(s.Grade == null ? "No grade" : @s.Grade.ToString())</td>
+                    <td class="col-md-3">
+                        <form asp-controller="Trainers" asp-action="AssesStudent" method="post">
+                            <input type="hidden" name="studentId" value="@s.Id" />
+                            <input type="hidden" name="courseId" value="@Model.Id" />
+                            <div class="form-group col-md-4">
+                                <select name="grade" class="form-control" asp-items="@Html.GetEnumSelectList<Grade>()"></select>
+                            </div>
+                            <input type="submit" value="Asses" class="btn btn-success" />
+                        </form>
+                    </td>
+                    <td>
+                        @if (s.HasSolution)
+                        {
+                            <a asp-controller="Trainers" asp-action="DownloadSolution" asp-route-studentId="@s.Id" class="btn btn-primary">Download</a>
+                        }
+                        else
+                        {
+                            <span class="text-danger">No solution</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

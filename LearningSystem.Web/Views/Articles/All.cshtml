@@ -1,0 +1,55 @@
+﻿@model AllArticlesViewModel
+
+@{
+    ViewData["Title"] = "All Articles";
+}
+
+<h2 class="text-center">
+    @ViewData["Title"]
+    @if (User.IsInRole("BlogAuthor"))
+    {
+        <a asp-area="Blog" asp-action="Add" class="btn btn-success">Add Article</a>
+    }
+</h2>
+<hr />
+<div class="container">
+    <div class="row col-md-offset-0">
+        @if(Model.Articles.Count() == 0)
+        {
+            <h2>There are no articles !</h2>
+        }
+        else
+        {
+            <div class="row">
+                <form class="col-md-10">
+                    <div class="form-group col-md-8 col-md-offset-2">
+                        <input class="form-control" name="searchTerm" value="@(Model.Pagination.SearchTerm == null ? string.Empty : Model.Pagination.SearchTerm)" type="text" placeholder="Search articles">
+                    </div>
+                    <button class="btn btn-success col-md-2" type="submit">Search</button>
+                </form>
+            </div>
+
+            @foreach (var article in Model.Articles)
+            {
+                <div class="article col-md-5">
+                    <a asp-action="Details" asp-route-id="@article.Id">
+                        <h4 class="text-center">@article.Title</h4>
+                    </a>
+                    <div><strong>Author: </strong>@article.Author</div>
+                    <div><strong>Published: </strong>@article.PublishDate.ToShortDateString()</div>
+                    <hr />
+                    <p>
+                        @article.Content.CutArticleContent()
+                        <a asp-action="Details" asp-route-id="@article.Id"> <br />[Read More]</a>
+                    </p>
+                </div>
+            }
+        }
+    </div>
+
+    @if (Model.Articles.Count() != 0)
+    {
+        @Html.Partial("_Pagination", Model.Pagination)
+    }
+</div>
+

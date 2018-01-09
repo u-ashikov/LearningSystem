@@ -1,0 +1,13 @@
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\LearningSystem.Data.deps.json
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\LearningSystem.Data.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\LearningSystem.Data.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\LearningSystem.Common.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\LearningSystem.Common.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.csprojResolveAssemblyReference.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.csproj.CoreCompileInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.AssemblyInfoInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.AssemblyInfo.cs
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Data\obj\Debug\netstandard2.0\LearningSystem.Data.pdb

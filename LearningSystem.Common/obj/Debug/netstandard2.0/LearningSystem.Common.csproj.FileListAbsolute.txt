@@ -1,0 +1,9 @@
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\bin\Debug\netstandard2.0\LearningSystem.Common.deps.json
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\bin\Debug\netstandard2.0\LearningSystem.Common.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\bin\Debug\netstandard2.0\LearningSystem.Common.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.csprojResolveAssemblyReference.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.csproj.CoreCompileInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.AssemblyInfoInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.AssemblyInfo.cs
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Common\obj\Debug\netstandard2.0\LearningSystem.Common.pdb

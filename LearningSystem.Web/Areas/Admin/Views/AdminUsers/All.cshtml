@@ -1,0 +1,44 @@
+﻿@model AllUsersViewModel
+
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+
+@if (Model.Users.Count() == 0)
+{
+    <h3>There are no users!</h3>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.Name</td>
+                    <td>@user.Username</td>
+                    <td>@user.Email</td>
+                    <td>@user.Birthdate.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="AddToRole" asp-route-id="@user.Id" class="btn btn-primary">Add To Role</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+   @Html.Partial("_Pagination", Model.Pagination)
+}
+

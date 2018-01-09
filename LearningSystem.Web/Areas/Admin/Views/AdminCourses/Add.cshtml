@@ -1,0 +1,13 @@
+﻿@model CourseFormModel
+
+@{
+    ViewData["Title"] = "Add Course";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+@Html.Partial("_CourseForm", Model);
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

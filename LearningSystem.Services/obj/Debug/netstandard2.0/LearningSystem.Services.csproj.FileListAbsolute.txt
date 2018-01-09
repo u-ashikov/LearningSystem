@@ -1,0 +1,17 @@
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.deps.json
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Services.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Common.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Data.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Infrastructure.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Data.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Infrastructure.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\LearningSystem.Common.pdb
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\bin\Debug\netstandard2.0\Microsoft.EntityFrameworkCore.SqlServer.xml
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.csprojResolveAssemblyReference.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.csproj.CoreCompileInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.AssemblyInfoInputs.cache
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.AssemblyInfo.cs
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.dll
+C:\Users\uashi\Documents\Visual Studio 2017\Projects\LearningSystem.Web\LearningSystem.Services\obj\Debug\netstandard2.0\LearningSystem.Services.pdb

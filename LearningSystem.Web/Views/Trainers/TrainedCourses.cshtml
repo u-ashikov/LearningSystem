@@ -1,0 +1,50 @@
+﻿@model TrainerCoursesViewModel
+
+@{
+    ViewData["Title"] = "Trained Courses";
+    Layout = "_ProfileLayout";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+
+@if(Model.Courses.Count() == 0)
+{
+    <h2>You are not assigned for trainer for any course!</h2>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model.Courses)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>@c.StartDate.ToShortDateString()</td>
+                    <td>@c.EndDate.ToShortDateString()</td>
+                    <td>
+                       @if(c.EndDate >= DateTime.Now)
+                       {
+                           <span class="text-success">Ongoing</span>
+                        }
+                       else
+                       {
+                            <a asp-controller="Trainers" asp-action="CourseStudents" asp-route-id="@c.Id" class="btn btn-primary">Asses</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Pagination", Model.Pagination)
+}
+

@@ -1,0 +1,36 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.carousel-caption p {
+    font-size: 20px;
+}
+
+div.carousel-inner {
+    margin-top:10px;
+}
+
+div.carousel-inner > div.item > img {
+    height: 450px;
+    width: 100%;
+}
+
+div.search {
+   width:10%;
+}
+
+#qrCode {
+    margin: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .carousel-caption {
+        display: none;
+    }
+}

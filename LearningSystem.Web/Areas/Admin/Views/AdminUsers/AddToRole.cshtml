@@ -1,0 +1,50 @@
+﻿@model UserRolesFormModel
+
+@{
+    ViewData["Title"] = "Add Roles";
+}
+
+<div class="container">
+    <div class="row col-md-6 col-md-offset-3">
+        <h2 class="text-center">@ViewData["Title"]</h2>
+        <hr />
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Username"></label>
+                <input asp-for="Username" type="text" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" type="text" class="form-control" readonly />
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.UserRoles"></label>
+                <ul>
+                    @if(Model.UserRoles.Count == 0)
+                    {
+                        <li>No roles</li>}
+                    else
+                    {
+                        @foreach (var role in Model.UserRoles)
+                        {
+                            <li>@role</li>
+                        }
+                    }
+                </ul>
+            </div>
+            <div class="form-group">
+                <label asp-for="Roles"></label>
+                <select asp-for="Roles" class="form-control" asp-items="@Html.GetEnumSelectList<Role>()" required></select>
+                <span asp-validation-for="Roles"></span>
+                <span class="text-danger">* Hold Ctrl to select multi items</span>
+            </div>
+            <a class="btn btn-default" asp-action="All">Back</a>
+            <input type="submit" value="Add Roles" class="btn btn-success" />
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

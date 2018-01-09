@@ -1,0 +1,13 @@
+﻿a.back {
+    float:left;
+}
+
+div.course-info {
+    margin-bottom:10px;
+}
+
+div.container div.course-info-holder {
+    border:1px solid #efebeb;
+    border-radius:20px;
+    padding:20px;
+}

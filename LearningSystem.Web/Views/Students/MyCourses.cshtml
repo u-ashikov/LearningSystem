@@ -1,0 +1,90 @@
+﻿@model StudentCoursesServiceModel
+
+@{
+    ViewData["Title"] = "My Courses";
+    Layout = "_ProfileLayout";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+@if (Model.StudentCourses.Count() == 0)
+{
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Ooops!</h4>
+        <p>You don't participate in any course at the moment. However, you can take part to course my clicking Sign Up button on any course which has not already started.</p>
+        <p class="mb-0">Go to <a asp-controller="Courses" asp-action="All">All Courses</a> and choose courses.</p>
+    </div>
+}
+else
+{
+    <div>
+        <div><strong>Username: </strong>@Model.Username</div>
+        <br />
+        <div><strong>Name: </strong>@Model.Name</div>
+        <br />
+        <div><strong>Email: </strong>@Model.Email</div>
+    </div>
+    <br />
+    <p class="text-warning">* On the last day of every course you will be provided with option to upload solution for each course.</p>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Trainer</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Grade</th>
+                <th>Certificate</th>
+                <th>Sign Out</th>
+                <th>Upload Solution</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model.StudentCourses)
+            {
+                <tr>
+                    <td>@c.Name</td>
+                    <td>@c.Trainer</td>
+                    <td>@c.StartDate.ToShortDateString()</td>
+                    <td>@c.EndDate.ToShortDateString()</td>
+                    <td>@(c.Grade == null ? "No grade" : c.Grade.ToString())</td>
+                    <td>
+                        @if(c.Grade == Grade.A || c.Grade == Grade.B || c.Grade == Grade.C)
+                        {
+                            <a asp-controller="Students" asp-action="CourseCertificate" asp-route-courseId ="@c.Id" class="btn btn-primary">Certificate</a>
+                        }
+                        else
+                        {
+                            <span>No Certificate</span>
+                        }
+                    </td>
+                    <td>
+                        @if (c.StartDate < DateTime.Now && c.EndDate > DateTime.Now)
+                        {
+                            <span class="text-danger">Course has started!</span>
+                        }
+                        else if (c.EndDate.Date <= DateTime.Now.Date)
+                        {
+                            <span class="text-success">Course has finished!</span>
+                        }
+                        else
+                        {
+                            <a asp-controller="Students" asp-action="SignOutFromCourse" asp-route-id="@c.Id" class="btn btn-danger">Sign Out</a>
+                        }
+                    </td>
+                    <td>
+                        @if (c.EndDate.Date == DateTime.Now.Date)
+                        {
+                            <a asp-controller="Students" asp-action="UploadSolution" asp-route-courseId="@c.Id" class="btn btn-success">Upload</a>
+                        }
+                        else if (c.EndDate.Date < DateTime.Now.Date)
+                        {
+                            <span class="text-danger">The term has expired</span>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

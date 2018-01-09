@@ -1,0 +1,48 @@
+﻿@model AllCoursesViewModel
+
+@{
+    ViewData["Title"] = "Active Courses";
+}
+
+<h2 class="text-center">@ViewData["Title"]</h2>
+<hr />
+
+@if(Model.Courses.Count() == 0)
+{
+    <h2 class="text-center">There are no courses yet!</h2>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Trainer</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var course in Model.Courses)
+            {
+                <tr>
+                    <td>@course.Name</td>
+                    <td>@course.TrainerName</td>
+                    <td>@course.StartDate.ToShortDateString()</td>
+                    <td>@course.EndDate.ToShortDateString()</td>
+                    <td>
+                        <a asp-action="Details" asp-route-id="@course.Id" class="btn btn-primary">Details</a>
+                        @if (User.IsInRole("Administrator"))
+                        {
+                            <a asp-area="Admin" asp-controller="Courses" asp-action="Edit" asp-route-id="@course.Id" class="btn btn-warning">Edit</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @Html.Partial("_Pagination", Model.Pagination)
+}
+

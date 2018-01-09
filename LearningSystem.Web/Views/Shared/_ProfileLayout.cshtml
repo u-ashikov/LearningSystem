@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "My Profile";
+    bool isTrainer = User.IsInRole(Role.Trainer.ToString());
+}
+
+<environment include="Development">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/profile.css" />
+    <link rel="stylesheet" href="~/css/pagination.css" />
+</environment>
+
+<div class="container col-md-12">
+    <div class="row">
+        <nav class="col-md-2">
+            <ul class="side-nav">
+               @if (isTrainer)
+               {
+                <li>
+                    <span class="role-badge label label-success">Trainer</span>
+                </li>
+               }
+                <li>
+                    <a asp-controller="Courses" asp-action="All">All Courses</a>
+                </li>
+                <li>
+                    <a asp-controller="Students" asp-action="MyCourses">My Courses</a>
+                </li>
+                @if (isTrainer)
+                {
+                    <li>
+                        <a asp-controller="Trainers" asp-action="TrainedCourses">Trained Courses</a>
+                    </li>
+                }
+
+                <li>
+                    <a asp-controller="Account" asp-action="Edit">Edit Profile</a>
+                </li>
+                <li>
+                    <form method="post" asp-action="Logout" asp-controller="Account">
+                        <button class="logout-btn" type="submit">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </nav>
+        <div class="profile-info col-md-10">
+            @if (TempData["message"] != null)
+            {
+                <div class="alert alert-@TempData["type"] alert-dismissible text-center" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    @TempData["message"]
+                </div>}
+            @RenderBody()
+            <hr />
+            <footer class="text-center">
+                <p>&copy; 2017 - Learning System</p>
+            </footer>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}
+

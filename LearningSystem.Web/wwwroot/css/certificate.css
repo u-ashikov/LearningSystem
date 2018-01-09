@@ -1,0 +1,16 @@
+﻿div.certificate {
+    border:1px solid black;
+    width:60%;
+    margin-top:20px;
+}
+
+hr.line {
+    width:10%;
+    color:black;
+    border:1px solid black;
+}
+
+span.issue-date {
+    margin:40px 0 10px 0;
+    float:left;
+}
